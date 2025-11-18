@@ -1,7 +1,7 @@
 const swaggerAutogen = require('swagger-autogen')();
 
 const IS_RENDER = process.env.RENDER === 'true';
-const HOST = IS_RENDER ? 'cse341-careconnect-api.onrender.com' : `localhost:${process.env.PORT || 8080}`;
+const HOST = IS_RENDER ? 'https://cse341-week03-04-api-asignment.onrender.com' : `localhost:${process.env.PORT || 8080}`;
 
 const doc = {
   info: {

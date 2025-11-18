@@ -10,7 +10,12 @@ const consultationRoutes = require('./routes/consultations');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*', // Or: 'http://localhost:3000'
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization']
+}));
+;
 app.use(express.json());
 
 // Root JSON message
